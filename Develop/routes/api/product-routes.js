@@ -28,6 +28,7 @@ router.get('/:id', async(req, res) => {
     if(!singleProd){
       return res.status(404).json({message: 'Product Not Found.'})
     }
+    res.status(200).json(singleProd);
   } catch (error) {
     res.status(500).json(error);
   }
